@@ -22,3 +22,7 @@
 ###（4）、使用npm命令安装下载文件时，失败，或连接超时等问题，原因需要翻墙，改使用淘宝镜像
 ####第一步：npm install -g cnpm --registry=https://registry.npm.taobao.org
 ####第二步：安装成功后，上述过程使用带有npm install ...命令时，换成cnpm install ...即可
+###（5）、mac终端问题、Hbuilder、sublime、webstorm均具备
+####HBuilder配置终端为内置控制台中，终端提示信息基本少等可怜，使用不便，推荐使用本机terminal
+####sublime配置终端为内置命令，可定位目录启动终端，install-package  terminal，启动为本机终端窗口，个别机型，前提终端窗口开启状态，推荐使用
+####webstorm内置终端控制台，使用起来较为简单，但1、是npm没有找到，2、是索引带来等卡死，网上相应的解决方法，并没有带来好的体验、使用起来感觉很重、mac不推荐使用、更适合新手
