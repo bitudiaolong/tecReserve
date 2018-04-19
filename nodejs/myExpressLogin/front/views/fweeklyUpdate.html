@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>周报</title>
+		<link rel="stylesheet" type="text/css" href="/css/pluging/bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="/css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="/css/pluging/animate/animate.css">
+		<link rel="stylesheet" type="text/css" href="/css/pluging/summernote/summernote.css" />
+		<link rel="stylesheet" type="text/css" href="/css/pluging/summernote/summernote-bs3.css" />
+		<link rel="stylesheet" type="text/css" href="/css/pluging/HplusUI/style.css" />
+
+	</head>
+
+	<body class="gray-bg">
+		<div id="container" class="wrapper wrapper-content animated fadeIn">
+			<div class="col-sm-3">
+				<div class="ibox">
+					<div class="ibox-title">
+						<h5>团队</h5>
+					</div>
+					<div class="ibox-content">
+						<div id='external-events'>
+							<div class='external-event navy-bg'>我自己的周报</div>
+							<div class='external-event'>玄苦-李宏鹏的周报</div>
+							<div class='external-event'>玄苦-李宏鹏的周报</div>
+							<div class='external-event'>玄苦-李宏鹏的周报</div>
+						</div>
+					</div>
+				</div>
+				<div class="ibox">
+					<div class="ibox-content">
+						<h2>使用技巧</h2>
+						<p>1、一天只能添加一次日报</p>
+						<p>2、每天可以多次更新当天日报</p>
+						<p>3、每天发的日报不能删除</p>
+						<p>4、可以查看除自己外其它组内成员的周报</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-9">
+				<div class="ibox">
+					<div class="ibox-content">
+						<h4>标题</h4>
+						<div class="m-t-md m-b-lg">
+							<input type="text" class="form-control" v-model="title">
+						</div>
+						<div id="summernote" class="m-b-lg"></div>
+						<div class="m-t-lg text-right">
+							<a class="btn btn-primary btn-sm" v-on:click="save();">提交</a>
+							<a class="btn btn-primary btn-sm m-l-5">取消</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 全局js -->
+		<script type="text/javascript" src="/js/pluging/jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="/js/pluging/bootstrap/bootstrap.min.js"></script>
+		<script type="text/javascript" src="/js/pluging/summernote/summernote.min.js"></script>
+		<script type="text/javascript" src="/js/pluging/summernote/summernote-zh-CN.js"></script>
+		<script type="text/javascript" src="/js/pluging/layer/layer.min.js"></script>
+		<script type="text/javascript" src="/js/pluging/vue/vue.min-2.4.0.js"></script>
+		<script type="text/javascript" src="/js/utils.js"></script>
+		<script type="text/javascript" src="/js/fweeklyUpdate.js"></script>
+	</body>
+
+</html>

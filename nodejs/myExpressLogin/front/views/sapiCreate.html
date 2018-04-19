@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>添加接口</title>
+		<link rel="stylesheet" type="text/css" href="/css/pluging/bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="/css/pluging/animate/animate.css">
+		<link rel="stylesheet" type="text/css" href="/css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="/css/pluging/HplusUI/style.css" />
+
+	</head>
+
+	<body class="gray-bg">
+		<div class="animated fadeInUp">
+			<div class="ibox clearfix">
+				<div class="ibox-title">
+					<h5>添加接口详细信息</h5>
+				</div>
+				<div class="ibox-content clearfix">
+					<div class="col-sm-5 form-horizontal">
+						<div class="form-group">
+							<label class="col-sm-3 control-label">接口分组：</label>
+							<div class="col-sm-9">
+								<input type="text" placeholder="请输入项目简称" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">接口名称：</label>
+							<div class="col-sm-9">
+								<input type="text" placeholder="请输入项目全称" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">接口状态：</label>
+							<div class="col-sm-9">
+								<select class="form-control" name="account">
+									<option>开发中</option>
+									<option>修改中</option>
+									<option>已完成</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">域名类型：</label>
+							<div class="col-sm-9">
+								<select class="form-control" name="account">
+									<option>测试服务器</option>
+									<option>正式服务器</option>
+									<option>本地服务器</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">服务域名：</label>
+							<div class="col-sm-9">
+								<input type="text" placeholder="如：http://localhost:3000" class="form-control">
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-5 form-horizontal">
+						<div class="form-group">
+							<label class="col-sm-3 control-label">请求类型：</label>
+							<div class="col-sm-9">
+								<select class="form-control" name="account" placeholder="POST/GET">
+									<option>POST</option>
+									<option>GET</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">接口地址：</label>
+							<div class="col-sm-9">
+								<input type="text" placeholder="如：/api/home/login" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">请求参数：</label>
+							<div class="col-sm-9">
+								<label><input type="radio" value="option1" name="optionsRadios">是</label>
+								<label><input type="radio" value="option1" name="optionsRadios" checked="true">否</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">立项时间：</label>
+							<div class="col-sm-9">
+								<input type="date" placeholder="请输入立项时间" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">开发周期：</label>
+							<div class="col-sm-9">
+								<input type="date" placeholder="请输入开发周期" class="form-control">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="ibox-title">
+					<h5>添加请求参数</h5>
+				</div>
+				<div class="ibox-content clearfix">
+					<div class="clearfix m-b">
+						<div class="col-sm-2 text-center">
+							参数
+						</div>
+						<div class="col-sm-1 text-center">
+							类型
+						</div>
+						<div class="col-sm-1 text-center">
+							是否必填
+						</div>
+						<div class="col-sm-4 text-center">
+							备注
+						</div>
+						<div class="col-sm-2 text-center">
+							操作
+						</div>
+					</div>
+					<div class="clearfix m-b">
+						<div class="col-sm-2">
+							<input type="text" placeholder="必填" class="form-control">
+						</div>
+						<div class="col-sm-1">
+							<select class="form-control" name="account" placeholder="必填">
+								<option>String</option>
+								<option>Int</option>
+								<option>Array</option>
+							</select>
+						</div>
+						<div class="col-sm-1">
+							<select class="form-control" name="account" placeholder="是否必填">
+								<option>必填</option>
+								<option>选填</option>
+							</select>
+						</div>
+						<div class="col-sm-4">
+							<input type="text" placeholder="必填" class="form-control">
+						</div>
+						<div class="col-sm-2 text-center">
+							<button class="btn btn-primary">删除</button>
+						</div>
+					</div>
+					<div class="clearfix m-b">
+						<div class="col-sm-2">
+							<input type="text" placeholder="必填" class="form-control">
+						</div>
+						<div class="col-sm-1">
+							<select class="form-control" name="account" placeholder="必填">
+								<option>String</option>
+								<option>Int</option>
+								<option>Array</option>
+							</select>
+						</div>
+						<div class="col-sm-1">
+							<select class="form-control" name="account" placeholder="是否必填">
+								<option>必填</option>
+								<option>选填</option>
+							</select>
+						</div>
+						<div class="col-sm-4">
+							<input type="text" placeholder="必填" class="form-control">
+						</div>
+						<div class="col-sm-2 text-center">
+							<button class="btn btn-primary">删除</button>
+						</div>
+					</div>
+					<div class="clearfix">
+						<div class="col-sm-10 text-center">
+							<button type="button" class="btn btn-primary btn-rounded"><i class="fa fa-plus"></i>新增加一个参数</button>
+						</div>
+					</div>
+				</div>
+				<div class="ibox-title">
+					<h5>返回参数</h5>
+				</div>
+				<div class="ibox-content clearfix">
+					<h2>errcode:0,</h2>
+					<h2>errmsg:"success",</h2>
+					<h2>data：{</h2>
+					<div class="clearfix m-l-lg">
+						<div class="col-sm-10 ">
+							<textarea class="form-control" style="font-size: 20px;overflow-y:visible"></textarea>
+						</div>
+					</div>
+					<h2>	}</h2>
+					<div class="hr-line-dashed"></div>
+					<div class="col-sm-10 text-right">
+						<button type="button" class="btn btn-primary">创建</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 全局js -->
+		<script type="text/javascript" src="/js/pluging/jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="/js/pluging/bootstrap/bootstrap.min.js"></script>
+	</body>
+
+</html>

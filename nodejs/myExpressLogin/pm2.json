@@ -1,0 +1,15 @@
+{
+  apps : [{
+      name: "front",
+       cwd: "./front/",
+    script: "./bin/www",
+     watch: true	,
+ exec_mode: "cluster",
+  },{
+	  name: "server",
+	   cwd: "./server/",
+    script: "./bin/www",
+     watch: true	,
+ exec_mode: "cluster"
+  }]
+}

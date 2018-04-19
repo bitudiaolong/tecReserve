@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>项目列表</title>
+		<link rel="stylesheet" type="text/css" href="/css/pluging/bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="/css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="/css/pluging/animate/animate.css">
+		<link rel="stylesheet" type="text/css" href="/css/pluging/datatables/dataTables.bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="/css/pluging/HplusUI/style.css" />
+
+	</head>
+
+	<body class="gray-bg">
+		<div id="container" class="wrapper wrapper-content animated fadeIn">
+			<div class="col-sm-3">
+				<div class="ibox float-e-margins">
+					<div class="ibox-title">
+						<h5>本周工作计划</h5>
+					</div>
+					<div class="ibox-content">
+						<div id='external-events'>
+							<div class='external-event navy-bg' v-on:click="look('')">所有项目</div>
+							<div class='external-event navy-bg' v-on:click="look(sessionStorage.userId)">我参与的项目</div>
+						</div>
+					</div>
+				</div>
+				<div class="ibox float-e-margins">
+					<div class="ibox-content">
+						<h2>使用技巧</h2>
+						<p>1、左侧按钮可以查看所有的项目，或这查看当前自己所有参与的项目</p>
+						<p>2、右上角按钮可以创建项目</p>
+						<p>3、点击项目名称或查看按钮，查看项目详情</p>
+						<p>4、点击项目经理名称，查看项目经理个人信息</p>
+						<p>5、点击编辑按钮，修改项目基本信息</p>
+						<p>6、搜索输入项目名称，可一搜索到具体项目</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-9">
+				<div class="ibox">
+					<div class="ibox-title">
+						<h5>所有项目</h5>
+						<div class="ibox-tools">
+							<a onclick="add();" class="btn btn-primary btn-xs">创建新项目</a>
+						</div>
+					</div>
+					<div class="ibox-content">
+						<div class="row m-b-sm m-t-sm">
+							<div class="col-md-1">
+								<button type="button" id="loading-example-btn" class="btn btn-white btn-sm"><i class="fa fa-refresh"></i> 刷新</button>
+							</div>
+							<div class="col-md-11">
+								<div class="input-group">
+									<input type="text" placeholder="请输入项目名称" class="input-sm form-control" v-model="search" v-on:keyup="searchBtn()"> 
+									<span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary" v-on:click="searchBtn()"> 搜索</button> </span>
+								</div>
+							</div>
+						</div>
+						<div class="project-list">
+							<table class="table table-hover dataTables-example dataTable">
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="/js/pluging/jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="/js/pluging/bootstrap/bootstrap.min.js"></script>
+		<script type="text/javascript" src="/js/pluging/datatables/jquery.dataTables.js"></script>
+		<script type="text/javascript" src="/js/pluging/datatables/dataTables.bootstrap.js"></script>
+		<script type="text/javascript" src="/js/pluging/layer/layer.min.js"></script>
+		<script type="text/javascript" src="/js/pluging/vue/vue.min-2.4.0.js"></script>
+		<script type="text/javascript" src="/js/fprojectList.js"></script>
+	</body>
+
+</html>
