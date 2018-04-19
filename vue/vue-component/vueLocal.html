@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>vue局部组件</title>
+	</head>
+
+	<body>
+		<div id="app">
+			<!--绑定v-bind:user==:user，user为props定义-->
+			<my-cc v-for="user in list" :user="user"></my-cc>
+		</div>
+		<script src="js/vue.js"></script>
+		<script>
+			new Vue({
+				el: '#app',
+				data: {
+					list: [{
+						name: "BoBo",
+						email: "bobo@163.com"
+					}, {
+						name: "Peter",
+						email: "peter@163.com"
+					}]
+				},
+				components: { //注册局部组件
+					'my-cc': { //组件名字，建议中杠单词组成
+						template: '<li>{{user.name}}  {{user.email}}</li>', //组件模版
+						props: ["user"] //注册传值容器
+					}
+				}
+			})
+		</script>
+	</body>
+
+</html>

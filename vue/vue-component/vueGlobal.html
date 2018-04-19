@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>vue全局组件</title>
+	</head>
+
+	<body>
+		<div id="app">
+			<input type="text" v-model="inputs" />
+			<p>三个组件公用一个data对象</p>
+			<div>
+				<my-xxx :inp='inputs'></my-xxx>
+				<my-xxx :inp='inputs'></my-xxx>
+				<my-xxx :inp='inputs'></my-xxx>
+			</div>
+			<p>每个组件返回全新的数据对象</p>
+			<div>
+				<my-xyz :inp='inputs'></my-xyz>
+				<my-xyz :inp='inputs'></my-xyz>
+				<my-xyz :inp='inputs'></my-xyz>
+			</div>
+		</div>
+		<script src="js/vue.js"></script>
+		<script>
+			var data = {
+				counter: 0
+			}
+			//注册全局组件my-component，建议中杠单词组成
+			Vue.component('my-xxx', {
+				props: ['mmsg', 'inp'], //注册传值容器
+				template: '<button v-on:click="counter += 1">点击了{{counter}}次{{inp}}</button>',
+				data: function() { //必须是一个函数
+					return data
+				}
+			});
+			//注册全局组件my-component，建议中杠单词组成
+			Vue.component('my-xyz', {
+				props: ['mmsg', 'inp'], //注册传值容器
+				template: '<button v-on:click="counter += 1">点击了{{counter}}次{{inp}}</button>',
+				data: function() { //必须是一个函数
+					return {
+						counter: 0
+					}
+				}
+			});
+			new Vue({
+				el: '#app',
+				data: {
+					inputs: 'Hello World'
+				}
+			})
+		</script>
+	</body>
+
+</html>
