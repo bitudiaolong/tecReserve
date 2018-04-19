@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>vue组件prop验证</title>
+	</head>
+
+	<body>
+		<div id="app">
+			<my-component :propA='inputs'></my-component>
+		</div>
+		<script src="js/vue.js"></script>
+		<script>
+			Vue.component('my-component', {
+				props: {
+					propA: {
+						validator: function(value) {
+							return value > 10;
+						}
+					}
+				},
+				template: '<div>"全局组件"{{propA}}</div>'
+			});
+			new Vue({
+				el: '#app',
+				data: {
+					inputs: '哈哈'
+				}
+			})
+		</script>
+	</body>
+
+</html>

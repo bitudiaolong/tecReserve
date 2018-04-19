@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>vue组件</title>
+	</head>
+
+	<body>
+		<div id="app">
+			<input type="" name="" id="" value="" v-model="inputs" />
+			<my-component :mmsg='message' :inp='inputs'></my-component>
+			<my-cc></my-cc>
+		</div>
+		<script src="js/vue.js"></script>
+		<script>
+			var cc = {
+				template: '<div>I am is "局部组件"</div>'
+			}
+			var data = {
+				counter: 0
+			}
+
+			Vue.component('my-component', {
+				props: {'mmsg', 'inp'
+					propE: {
+						type: Object,
+						default: function() {
+							return {
+								message: 'hello'
+							}
+						}
+					}
+				},
+				template: '<div v-on:click="counter += 1">{{counter}} "全局组件"{{mmsg}}{{inp}}</div>',
+				data: function() {
+					return data
+				}
+			});
+			new Vue({
+				components: {
+					'my-cc': cc
+				},
+				el: '#app',
+				data: {
+					message: 'Hello World',
+					inputs: ''
+				}
+
+			})
+		</script>
+	</body>
+
+</html>
