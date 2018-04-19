@@ -2,18 +2,20 @@
 	<div id="app">
 		<img src="./assets/logo.png">
 		<!--使用components文件夹下的HelloWorld组件-->
-		<HelloWorld msg="Welcome to Your Vue.js App" />
+		<ccc msg="Welcome to Your Vue.js App" />
 	</div>
 </template>
 
 <script>
-	import HelloWorld from './components/HelloWorld.vue'//导入组件，HelloWorld为HelloWorld.vue中export的name
+	//ccc标签中的msg为传值
+	import ccc from './components/HelloWorld.vue'//导入组件，ccc自定义
 	export default {
-		name: 'app',//该组件为入口，所以main.js中render: h => h(App)
-		components: {
-			HelloWorld
+		name: 'app',
+		components: {//注册组件
+			ccc
 		}
 	}
+	//alert(HelloWorld.name);调用HelloWorld组件暴露出来的name
 </script>
 
 <style>
