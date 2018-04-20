@@ -101,27 +101,27 @@ $ npm run dev
 │   ├── check-versions.js   
 │   ├── dev-client.js   
 │   ├── dev-server.js   
-│   ├── utils.js
-* │   ├── vue-loader.conf.js
-* │   ├── webpack.base.conf.js
-* │   ├── webpack.dev.conf.js
-* │   └── webpack.prod.conf.js
-* ├── config                          // 项目基本设置文件夹
-* │   ├── dev.env.js              // 开发配置文件
-* │   ├── index.js                    // 配置主文件
-* │   └── prod.env.js             // 编译配置文件
-* ├── index.html                      // 项目入口文件（这才是真正的入口，尽管它衣不蔽体，清洁溜溜，但是缺它不可）
-* ├── package-lock.json           // npm5 新增文件，优化性能
-* ├── package.json                    // 项目依赖包配置文件(神奇的事情发生了，cnpm install怎么知道我要安装什么，原来是它们暗中勾结)
-* ├── src                             // 我们的项目的源码编写文件（开启编程的巅峰之路吧，放下美男子的矜持，在广阔的组件大地上尽情的奔跑吧）
-* │   ├── App.vue                 // APP入口文件
-* │   ├── assets                      // 初始项目资源目录，回头删掉
-* │   │   └── logo.png
-* │   ├── components              // 组件目录
-* │   │   └── Hello.vue           // 测试组件，回头删除
-* │   ├── page                    // 页面组件文件夹
-* │   ├── main.js                 // 主配置文件
-* │   └── router                      // 路由配置文件夹（这个路由，不是路由器，也不是交换机，跟光线电缆没有关系）
-* │       └── index.js            // 路由配置文件
-* │   ├── style                   // 样式文件夹
-* └── static                          // 资源放置目录
+│   ├── utils.js  
+│   ├── vue-loader.conf.js  
+│   ├── webpack.base.conf.js  
+│   ├── webpack.dev.conf.js  
+│   └── webpack.prod.conf.js  
+├── config                          // 项目基本设置文件夹  
+│   ├── dev.env.js              // 开发配置文件  
+│   ├── index.js                    // 配置主文件  
+│   └── prod.env.js             // 编译配置文件  
+├── index.html                      // 项目入口文件（这才是真正的入口，尽管它衣不蔽体，清洁溜溜，但是缺它不可）  
+├── package-lock.json           // npm5 新增文件，优化性能  
+├── package.json                    // 项目依赖包配置文件(神奇的事情发生了，cnpm install怎么知道我要安装什么，原来是它们暗中勾结)  
+├── src                             // 我们的项目的源码编写文件（开启编程的巅峰之路吧，放下美男子的矜持，在广阔的组件大地上尽情的奔跑吧）  
+│   ├── App.vue                 // APP入口文件  
+│   ├── assets                      // 初始项目资源目录，回头删掉  
+│   │   └── logo.png  
+│   ├── components              // 组件目录  
+│   │   └── Hello.vue           // 测试组件，回头删除  
+│   ├── page                    // 页面组件文件夹  
+│   ├── main.js                 // 主配置文件  
+│   └── router                      // 路由配置文件夹（这个路由，不是路由器，也不是交换机，跟光线电缆没有关系）  
+│       └── index.js            // 路由配置文件  
+│   ├── style                   // 样式文件夹  
+└── static                          // 资源放置目录
