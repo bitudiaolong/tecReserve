@@ -47,6 +47,7 @@ vue init webpack vue2
 ``` bash
 # 项目名字
 ? Project name vue2  
+
 # 项目描述
 ? Project description A Vue.js project  
 
@@ -77,15 +78,19 @@ vue init webpack vue2
 # 是否创建完项目后为你运行npm install，选择no回车，自己用淘宝镜像cnpm install
 ? Should we run `npm install` for you after the project has been created? (recommended) no 
 ​
-# 手脚架已经生成vue2
    vue-cli · Generated "vue2".    
 ​
-# 项目初始化已经完成
 Project initialization finished!
 ```
 
-1. 进入项目目录：cd vue2
-2. 安装项目所需要的依赖：cnpm install 这个时候就可以做一个安静的美男子，静静的等待了
+1. 进入项目目录
+``` bash
+cd vue2
+```
+2. 安装项目所需要的依赖
+``` bash
+cnpm install 
+```
 3. 启动项目：npm run dev
 
 ``` bash
