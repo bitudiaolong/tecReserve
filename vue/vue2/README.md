@@ -76,9 +76,7 @@ Project initialization finished!
 ```
 
 > 进入项目目录：cd vue2
-
 > 安装项目所需要的依赖：cnpm install 这个时候就可以做一个安静的美男子，静静的等待了
-
 > 启动项目：npm run dev
 
 ``` bash
