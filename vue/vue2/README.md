@@ -75,9 +75,11 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 Project initialization finished!
 ```
 
->​ 进入项目目录：cd vue2
->​ 安装项目所需要的依赖：cnpm install（这个时候就可以做一个安静的美男子，静静的等待了）
->​ 启动项目：npm run dev
+#### 进入项目目录：cd vue2
+
+#### 安装项目所需要的依赖：cnpm install（这个时候就可以做一个安静的美男子，静静的等待了）
+
+####​ 启动项目：npm run dev
 ``` bash
 $ npm run dev
 
@@ -90,15 +92,14 @@ $ npm run dev
  I  Your application is running here: http://localhost:8080(运行成功后的项目请求地址)
 ```
  
-# ========================
-####运行ok，在浏览器中输入http://localhost:8080，回车，就看到构建好的项目了
+#### 运行ok，在浏览器中输入http://localhost:8080，回车，就看到构建好的项目了
 
-#二、
-├── README.md                       // 项目说明文档
-├── node_modules                    // 项目依赖包文件夹（当你化身美男子时，node_modules它已经悄悄cnpm install生成了）
-├── build                           // 编译配置文件，一般不用管（webpack的东西便用边学吧）
-│   ├── build.js
-│   ├── check-versions.js
+# 二、目录结构
+>├── README.md                       // 项目说明文档
+>├── node_modules                    // 项目依赖包文件夹（当你化身美男子时，node_modules它已经悄悄cnpm install生成了）
+>├── build                           // 编译配置文件，一般不用管（webpack的东西便用边学吧）
+>│   ├── build.js
+>│   ├── check-versions.js
 │   ├── dev-client.js
 │   ├── dev-server.js
 │   ├── utils.js
