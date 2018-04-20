@@ -83,6 +83,7 @@ vue init webpack vue2
 Project initialization finished!
 ```
 
+# 二、启动项目
 1. 进入项目目录
 ``` bash
 cd vue2
@@ -107,7 +108,7 @@ $ npm run dev
  
 4. 运行ok，在浏览器中输入http://localhost:8080，回车，就看到构建好的项目了
 
-# 二、目录结构
+# 三、目录结构
 ├── README.md                       // 项目说明文档  
 ├── node_modules                    // 项目依赖包文件夹（当你化身美男子时，node_modules它已经悄悄cnpm install生成了）   
 ├── build                           // 编译配置文件，一般不用管（webpack的东西便用边学吧）   
