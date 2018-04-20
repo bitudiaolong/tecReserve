@@ -74,10 +74,11 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 # 项目初始化已经完成
 Project initialization finished!
 ```
->​#### 进入项目目录：cd vue2
-#### 安装项目所需要的依赖：cnpm install（这个时候就可以做一个安静的美男子，静静的等待了）
-#### 启动项目：npm run dev或cnpm run dev都可以
 
+>​ 进入项目目录：cd vue2
+>​ 安装项目所需要的依赖：cnpm install（这个时候就可以做一个安静的美男子，静静的等待了）
+>​ 启动项目：npm run dev
+``` bash
 $ npm run dev
 
 > vue2@1.0.0 dev /Users/gagc/mobile/h5/vue/vue2
@@ -87,6 +88,7 @@ $ npm run dev
  DONE  Compiled successfully in 4196ms (运行耗费4196ms时间)                                 17:07:26
 
  I  Your application is running here: http://localhost:8080(运行成功后的项目请求地址)
+```
  
 # ========================
 ####运行ok，在浏览器中输入http://localhost:8080，回车，就看到构建好的项目了
