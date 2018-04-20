@@ -34,23 +34,22 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ####3、cnpm install -g vue-cli或cnpm install -g @vue/cli-init
 ####4、vue init webpack vue2
 ####5、这里需要进行一些配置，默认回车即可
->? Project name vue2  (项目名字)
->? Project description A Vue.js project  (项目描述)
->? Author    //项目作者
->? Vue build runtime (是否安装编译器)
->? Install vue-router? Yes (是否安装vue路由)
->? Use ESLint to lint your code? Yes (是否使用ESLint检查js代码)
->? Pick an ESLint preset none   (选择一个ESLint预设的标准，这里可以选择standard)
->? Set up unit tests Yes (安装单元测试工具)
->? Pick a test runner noTest (选择一个测试运行者)
->? Setup e2e tests with Nightwatch? Yes (是否设置使用Nightwatch进行端到端自动化测试)
->? Should we run `npm install` for you after the project has been created? (recommended) no (是否创建完项目后为你运行npm install，选择no回车，自己用淘宝镜像cnpm install)
+####? Project name vue2  (项目名字)
+####? Project description A Vue.js project  (项目描述)
+####? Author    //项目作者
+####? Vue build runtime (是否安装编译器)
+####? Install vue-router? Yes (是否安装vue路由)
+####? Use ESLint to lint your code? Yes (是否使用ESLint检查js代码)
+####? Pick an ESLint preset none   (选择一个ESLint预设的标准，这里可以选择standard)
+####? Set up unit tests Yes (安装单元测试工具)
+####? Pick a test runner noTest (选择一个测试运行者)
+####? Setup e2e tests with Nightwatch? Yes (是否设置使用Nightwatch进行端到端自动化测试)
+####? Should we run `npm install` for you after the project has been created? (recommended) no (是否创建完项目后为你运行npm install，选择no回车，自己用淘宝镜像cnpm install)
 ​
->   vue-cli · Generated "vue2".    (手脚架已经生成vue2)
+####   vue-cli · Generated "vue2".    (手脚架已经生成vue2)
 ​
 # Project initialization finished!（项目初始化已经完成）
-# ========================
-​#### 进入项目目录：cd vue2
+>​#### 进入项目目录：cd vue2
 #### 安装项目所需要的依赖：cnpm install（这个时候就可以做一个安静的美男子，静静的等待了）
 #### 启动项目：npm run dev或cnpm run dev都可以
 
