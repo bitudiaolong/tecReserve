@@ -30,11 +30,11 @@ npm test
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 # 一、构建vue项目
-#### 1、安装nodejs，选择偶数版本
-#### 2、安装淘宝镜像npm install -g cnpm --registry=https://registry.npm.taobao.org
-#### 3、cnpm install -g vue-cli或cnpm install -g @vue/cli-init
-#### 4、vue init webpack vue2
-#### 5、这里需要进行一些配置，默认回车即可
+1. 安装nodejs，选择偶数版本
+2. 安装淘宝镜像npm install -g cnpm --registry=https://registry.npm.taobao.org
+3. cnpm install -g vue-cli或cnpm install -g @vue/cli-init
+4. vue init webpack vue2
+5. 这里需要进行一些配置，默认回车即可
 ``` bash
 # 项目名字
 ? Project name vue2  
@@ -75,9 +75,9 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 Project initialization finished!
 ```
 
-* 进入项目目录：cd vue2
-* 安装项目所需要的依赖：cnpm install 这个时候就可以做一个安静的美男子，静静的等待了
-* 启动项目：npm run dev
+1. 进入项目目录：cd vue2
+2. 安装项目所需要的依赖：cnpm install 这个时候就可以做一个安静的美男子，静静的等待了
+3. 启动项目：npm run dev
 
 ``` bash
 $ npm run dev
@@ -91,37 +91,37 @@ $ npm run dev
  I  Your application is running here: http://localhost:8080(运行成功后的项目请求地址)
 ```
  
-#### 运行ok，在浏览器中输入http://localhost:8080，回车，就看到构建好的项目了
+4. 运行ok，在浏览器中输入http://localhost:8080，回车，就看到构建好的项目了
 
 # 二、目录结构
->├── README.md                       // 项目说明文档
->├── node_modules                    // 项目依赖包文件夹（当你化身美男子时，node_modules它已经悄悄cnpm install生成了）
->├── build                           // 编译配置文件，一般不用管（webpack的东西便用边学吧）
->│   ├── build.js
->│   ├── check-versions.js
-│   ├── dev-client.js
-│   ├── dev-server.js
-│   ├── utils.js
-│   ├── vue-loader.conf.js
-│   ├── webpack.base.conf.js
-│   ├── webpack.dev.conf.js
-│   └── webpack.prod.conf.js
-├── config                          // 项目基本设置文件夹
-│   ├── dev.env.js              // 开发配置文件
-│   ├── index.js                    // 配置主文件
-│   └── prod.env.js             // 编译配置文件
-├── index.html                      // 项目入口文件（这才是真正的入口，尽管它衣不蔽体，清洁溜溜，但是缺它不可）
-├── package-lock.json           // npm5 新增文件，优化性能
-├── package.json                    // 项目依赖包配置文件(神奇的事情发生了，cnpm install怎么知道我要安装什么，原来是它们暗中勾结)
-├── src                             // 我们的项目的源码编写文件（开启编程的巅峰之路吧，放下美男子的矜持，在广阔的组件大地上尽情的奔跑吧）
-│   ├── App.vue                 // APP入口文件
-│   ├── assets                      // 初始项目资源目录，回头删掉
-│   │   └── logo.png
-│   ├── components              // 组件目录
-│   │   └── Hello.vue           // 测试组件，回头删除
-│   ├── page                    // 页面组件文件夹
-│   ├── main.js                 // 主配置文件
-│   └── router                      // 路由配置文件夹（这个路由，不是路由器，也不是交换机，跟光线电缆没有关系）
-│       └── index.js            // 路由配置文件
-│   ├── style                   // 样式文件夹
-└── static                          // 资源放置目录
+* ├── README.md                       // 项目说明文档
+* ├── node_modules                    // 项目依赖包文件夹（当你化身美男子时，node_modules它已经悄悄cnpm install生成了）
+* ├── build                           // 编译配置文件，一般不用管（webpack的东西便用边学吧）
+* │   ├── build.js
+* │   ├── check-versions.js
+* │   ├── dev-client.js
+* │   ├── dev-server.js
+* │   ├── utils.js
+* │   ├── vue-loader.conf.js
+* │   ├── webpack.base.conf.js
+* │   ├── webpack.dev.conf.js
+* │   └── webpack.prod.conf.js
+* ├── config                          // 项目基本设置文件夹
+* │   ├── dev.env.js              // 开发配置文件
+* │   ├── index.js                    // 配置主文件
+* │   └── prod.env.js             // 编译配置文件
+* ├── index.html                      // 项目入口文件（这才是真正的入口，尽管它衣不蔽体，清洁溜溜，但是缺它不可）
+* ├── package-lock.json           // npm5 新增文件，优化性能
+* ├── package.json                    // 项目依赖包配置文件(神奇的事情发生了，cnpm install怎么知道我要安装什么，原来是它们暗中勾结)
+* ├── src                             // 我们的项目的源码编写文件（开启编程的巅峰之路吧，放下美男子的矜持，在广阔的组件大地上尽情的奔跑吧）
+* │   ├── App.vue                 // APP入口文件
+* │   ├── assets                      // 初始项目资源目录，回头删掉
+* │   │   └── logo.png
+* │   ├── components              // 组件目录
+* │   │   └── Hello.vue           // 测试组件，回头删除
+* │   ├── page                    // 页面组件文件夹
+* │   ├── main.js                 // 主配置文件
+* │   └── router                      // 路由配置文件夹（这个路由，不是路由器，也不是交换机，跟光线电缆没有关系）
+* │       └── index.js            // 路由配置文件
+* │   ├── style                   // 样式文件夹
+* └── static                          // 资源放置目录
