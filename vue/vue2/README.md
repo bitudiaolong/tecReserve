@@ -31,9 +31,18 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 # 一、构建vue项目
 1. 安装nodejs，选择偶数版本
-2. 安装淘宝镜像npm install -g cnpm --registry=https://registry.npm.taobao.org
-3. cnpm install -g vue-cli或cnpm install -g @vue/cli-init
-4. vue init webpack vue2
+2. 安装淘宝镜像
+``` bash
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+```
+3. 安装vue手脚架
+``` bash
+cnpm install -g vue-cli或cnpm install -g @vue/cli-init
+```
+4. 构建项目
+``` bash
+vue init webpack vue2
+```
 5. 这里需要进行一些配置，默认回车即可
 ``` bash
 # 项目名字
@@ -85,10 +94,10 @@ $ npm run dev
 > vue2@1.0.0 dev /Users/gagc/mobile/h5/vue/vue2
 > webpack-dev-server --inline --progress --config build/webpack.dev.conf.js
 
- 95% emitting                                                                 b      
- DONE  Compiled successfully in 4196ms (运行耗费4196ms时间)                                 17:07:26
+ 95% emitting                                                                    
+ DONE  Compiled successfully in 4196ms                             
 
- I  Your application is running here: http://localhost:8080(运行成功后的项目请求地址)
+ I  Your application is running here: http://localhost:8080
 ```
  
 4. 运行ok，在浏览器中输入http://localhost:8080，回车，就看到构建好的项目了
