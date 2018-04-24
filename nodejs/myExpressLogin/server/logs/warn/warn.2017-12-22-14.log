@@ -1,1 +1,0 @@
-[2017-12-22T14:44:41.124] [INFO] debug - ::ffff:192.168.0.196 - - "POST /api/selectProjectDetail HTTP/1.1" 200 37 "http://localhost:3000/fprojectDetail?projectId=8" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36"
