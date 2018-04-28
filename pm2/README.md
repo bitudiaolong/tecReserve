@@ -410,5 +410,5 @@ EOF
 ```
 
 ![name][01]
-[01]: ./pm2_example_start.png '描述'
+[01]: pm2_example_start.png '描述'
 
