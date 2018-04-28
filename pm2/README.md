@@ -99,36 +99,41 @@ pm2 describe 0 Describing process with id 0 - name oc-server
 # 四、配置文件
 1.简单说明
  配置文件里的设置项，跟命令行参数基本是一一对应的。
+ 
  可以选择yaml或者json文件，就看个人洗好了。
+ 
  json格式的配置文件，pm2当作普通的js文件来处理，所以可以在里面添加注释或者编写代码，这对于动态调整配置很有好处。
+ 
  如果启动的时候指定了配置文件，那么命令行参数会被忽略。（个别参数除外，比如--env）
+ 
 2.例子
 ``` bash
 {
-         "name" : "fis-receiver",                                    | 应用名称 
-       "script" : "./bin/www",                                       | 实际启动脚本 
-          "cwd" : "./",                                              | 当前工作路径 
-         "watch": [                                                  | 监控变化的目录，一旦变化，自动重启 
-         		"bin",                                               |
-         		"routers"                                            |
-         		],                                                   |
- "ignore_watch" : [                                                  | 从监控目录中排除 
-                "node_modules",                                      |
-                "logs",                                              |
-                "public"                                             |
-                ],                                                   |
- "watch_options": {                                                  |
-                "followSymlinks": false                              |
-                },                                                   |
-   "error_file" : "./logs/app-err.log",                              | 错误日志路径 
-     "out_file" : "./logs/app-out.log",                              | 普通日志路径 
-           "env": {                                                  |
-                "NODE_ENV": "production"                             | 环境参数，当前指定为生产环境 
-                } 
+    "name" : "fis-receiver",                                    | 应用名称 
+    "script" : "./bin/www",                                     | 实际启动脚本 
+    "cwd" : "./",                                               | 当前工作路径 
+    "watch": [                                                  | 监控变化的目录，一旦变化，自动重启 
+        "bin",
+        "routers"
+        ],
+    "ignore_watch" : [                                          | 从监控目录中排除 
+        "node_modules",
+        "logs",
+        "public"
+        ],
+    "watch_options": {
+        "followSymlinks": false 
+        }, 
+    "error_file" : "./logs/app-err.log",                        | 错误日志路径 
+    "out_file" : "./logs/app-out.log",                          | 普通日志路径 
+    "env": {
+        "NODE_ENV": "production"                                | 环境参数，当前指定为生产环境 
+        } 
 }
 ```
 
 # 五、自动重启
+
  前面已经提到了，这里贴命令行，更多点击这里。
 ``` bash
 pm2 start app.js --watch
@@ -136,10 +141,15 @@ pm2 start app.js --watch
  这里是监控整个项目的文件，如果只想监听指定文件和目录，建议通过配置文件的watch、ignore_watch字段来设置。
 
 # 六、环境切换
- 在实际项目开发中，我们的应用经常需要在多个环境下部署，比如开发环境、测试环境、生产环境等。在不同环境下，有时候配置项会有差异，比如链接的数据库地址不同等。
+ 在实际项目开发中，我们的应用经常需要在多个环境下部署，比如开发环境、测试环境、生产环境等。
+ 
+ 在不同环境下，有时候配置项会有差异，比如链接的数据库地址不同等。
+ 
  对于这种场景，pm2也是可以很好支持的。首先通过在配置文件中通过env_xx来声明不同环境的配置，然后在启动应用时，通过--env参数指定运行的环境。
+ 
 1.环境配置声明
- 首先，在配置文件中，通过env选项声明多个环境配置。简单说明下：
+
+首先，在配置文件中，通过env选项声明多个环境配置。简单说明下：
 * env为默认的环境配置（生产环境），env_dev、env_test则分别是开发、测试环境。可以看到，不同环境下的NODE_ENV、REMOTE_ADDR字段的值是不同的。
 * 在应用中，可以通过process.env.REMOTE_ADDR等来读取配置中生命的变量。
 ``` bash
@@ -157,7 +167,8 @@ pm2 start app.js --watch
              }
 ```
 2.启动指明环境
- 假设通过下面启动脚本（开发环境），那么，此时process.env.REMOTE_ADDR的值就是相应的 http://wdev.example.com/ ，可以自己试验下。
+
+假设通过下面启动脚本（开发环境），那么，此时process.env.REMOTE_ADDR的值就是相应的 http://wdev.example.com/ ，可以自己试验下。
 ``` bash
 pm2 start app.js --env dev
 ```
@@ -170,27 +181,34 @@ pm2 start app.js -i 3 # 开启三个进程
 ```
 
 # 八、日志查看
+
  除了可以打开日志文件查看日志外，还可以通过pm2 logs来查看实时日志。这点对于线上问题排查非常重要。
+ 
  比如某个node服务突然异常重启了，那么可以通过pm2提供的日志工具来查看实时日志，看是不是脚本出错之类导致的异常重启。
 ``` bash
 pm2 logs
 ```
 
 # 九、指令tab补全
+
  运行pm2 --help，可以看到pm2支持的子命令还是蛮多的，这个时候，自动完成的功能就很重要了。
+ 
  运行如下命令。恭喜，已经能够通过tab自动补全了。
 ``` bash
 pm2 completion install source ~/.bash_profile
 ```
 
 # 十、开机自动启动
+
  可以通过pm2 startup来实现开机自启动。细节可参考。大致流程如下
 1.通过pm2 save保存当前进程状态。
 2.通过pm2 startup [platform]生成开机自启动的命令。（记得查看控制台输出）
 3.将步骤2生成的命令，粘贴到控制台进行，搞定。
 
 # 十一、传入node args
+
  直接上例子，分别是通过命令行和配置文件。
+ 
  命令行
 ``` bash
 pm2 start app.js --node-args="--harmony"
@@ -204,7 +222,9 @@ pm2 start app.js --node-args="--harmony"
 }
 ```
 1.实例说明
- 假设是在centos下，那么运行如下命令，搞定。强烈建议运行完成之后，重启机器，看是否设置成功。
+
+假设是在centos下，那么运行如下命令，搞定。强烈建议运行完成之后，重启机器，看是否设置成功。
+ 
 ``` bash
 pm2 save 
 ​pm2 startup centos 
@@ -219,13 +239,15 @@ pm2 save
 ```
 
 # 十二、监控(monitor)
- 运行如下命令，查看当前通过pm2运行的进程的状态。
+
+运行如下命令，查看当前通过pm2运行的进程的状态。
 ``` bash
 pm2 monit
 ```
 
 # 十三、内存使用超过上限自动重启
- 如果想要你的应用，在超过使用内存上限后自动重启，那么可以加上--max-memory-restart参数。（有对应的配置项）
+
+如果想要你的应用，在超过使用内存上限后自动重启，那么可以加上--max-memory-restart参数。（有对应的配置项）
 ``` bash
 pm2 start big-array.js --max-memory-restart 20M
 ```
@@ -344,7 +366,7 @@ npm install pm2@latest -g #安装最新版本pm2模块
 # pm2 --help
 ```
 # 三、PM2目录结构
- 默认的目录是：当前用于的家目录下的.pm2目录（此目录可以自定义，请参考：五、自定义启动文件），详细信息如下：
+ 默认的目录是：当前用于的家目录下的.pm2目录（此目录可以自定义，请参考：四、自定义启动文件），详细信息如下：
 ``` bash
 $HOME/.pm2                #will contain all PM2 related files
 $HOME/.pm2/logs           #will contain all applications logs
