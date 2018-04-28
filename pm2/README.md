@@ -409,6 +409,5 @@ EOF
 # pm2 start test.json    #启动，如下图：
 ```
 
-![name][01]
-[01]: pm2_example_start.png '描述'
+![avatar](/user/desktop/doge.png)
 
