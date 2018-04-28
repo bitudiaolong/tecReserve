@@ -3,8 +3,9 @@ pm2 是一个带有负载均衡功能的Node应用的进程管理器.当你要�
 PM2 （github上的源码）是开源的基于Nodejs的进程管理器，包括守护进程，监控，日志的一整套完整的功能，基本是Nodejs应用程序不二的守护进程选择，事实上它并不仅仅可以启动Nodejs的程序，只要是一般的脚本的程序它同样可以胜任。
 
 # 一、简介
-#### PM2是node进程管理工具，可以利用它来简化很多node应用管理的繁琐任务，如性能监控、自动重启、负载均衡等，而且使用非常简单。
-#### 下面就对PM2进行入门性的介绍，基本涵盖了PM2的常用的功能和配置。
+PM2是node进程管理工具，可以利用它来简化很多node应用管理的繁琐任务，如性能监控、自动重启、负载均衡等，而且使用非常简单。
+
+下面就对PM2进行入门性的介绍，基本涵盖了PM2的常用的功能和配置。
 
 # 二、安装
 
@@ -13,26 +14,34 @@ PM2 （github上的源码）是开源的基于Nodejs的进程管理器，包括�
 ```
 
 # 三、入门教程
-#### 挑我们最爱的express应用来举例。一般我们都是通过npm start启动应用，其实就是调用node ./bin/www。那么，换成pm2就是
-#### 注意，这里用了--watch参数，意味着当你的express应用代码发生变化时，pm2会帮你重启服务，多贴心。
+挑我们最爱的express应用来举例。一般我们都是通过npm start启动应用，其实就是调用node ./bin/www。那么，换成pm2就是
+
+注意，这里用了--watch参数，意味着当你的express应用代码发生变化时，pm2会帮你重启服务，多贴心。
 ``` bash
 pm2 start ./bin/www --watch
 ```
-#### 入门太简单了，没什么好讲的。直接上官方文档：http://pm2.keymetrics.io/docs/usage/quick-start
+
+入门太简单了，没什么好讲的。直接上官方文档：http://pm2.keymetrics.io/docs/usage/quick-start
 
 # 常用命令
 1.启动
-### 参数说明：
+参数说明：
 
-#### --watch：监听应用目录的变化，一旦发生变化，自动重启。如果要精确监听、不见听的目录，最好通过配置文件。
-#### -i --instances：启用多少个实例，可用于负载均衡。如果-i 0或者-i max，则根据当前机器核数确定实例数目。
-#### --ignore-watch：排除监听的目录/文件，可以是特定的文件名，也可以是正则。比如--ignore-watch="test node_modules "some scripts""
-#### -n --name：应用的名称。查看应用信息的时候可以用到。
-#### -o --output <path>：标准输出日志文件的路径。
-#### -e --error <path>：错误输出日志文件的路径。
-#### --interpreter <interpreter>：the interpreter pm2 should use for executing app (bash, python...)。比如你用的coffee script来编写应用。
+--watch：监听应用目录的变化，一旦发生变化，自动重启。如果要精确监听、不见听的目录，最好通过配置文件。
 
-####完整命令行参数列表：地址
+-i --instances：启用多少个实例，可用于负载均衡。如果-i 0或者-i max，则根据当前机器核数确定实例数目。
+
+--ignore-watch：排除监听的目录/文件，可以是特定的文件名，也可以是正则。比如--ignore-watch="test node_modules "some scripts""
+
+-n --name：应用的名称。查看应用信息的时候可以用到。
+
+-o --output <path>：标准输出日志文件的路径。
+
+-e --error <path>：错误输出日志文件的路径。
+
+--interpreter <interpreter>：the interpreter pm2 should use for executing app (bash, python...)。比如你用的coffee script来编写应用。
+
+完整命令行参数列表：地址
 ``` bash
 pm2 start app.js --watch -i 2
 ```
@@ -43,17 +52,17 @@ pm2 restart app.js
 ```
 
 3.停止
-#### 停止特定的应用。可以先通过pm2 list获取应用的名字（--name指定的）或者进程id。
+停止特定的应用。可以先通过pm2 list获取应用的名字（--name指定的）或者进程id。
 ``` bash
 pm2 stop app_name|app_id
 ```
-#### 如果要停止所有应用，可以
+如果要停止所有应用，可以
 ``` bash
 pm2 stop all
 ```
 
 4.删除
-#### 类似pm2 stop，如下
+ 类似pm2 stop，如下
 ``` bash
 pm2 stop app_name|app_id pm2 stop all
 ```
@@ -89,10 +98,10 @@ pm2 describe 0 Describing process with id 0 - name oc-server
 
 # 四、配置文件
 1.简单说明
-#### 配置文件里的设置项，跟命令行参数基本是一一对应的。
-#### 可以选择yaml或者json文件，就看个人洗好了。
-#### json格式的配置文件，pm2当作普通的js文件来处理，所以可以在里面添加注释或者编写代码，这对于动态调整配置很有好处。
-#### 如果启动的时候指定了配置文件，那么命令行参数会被忽略。（个别参数除外，比如--env）
+ 配置文件里的设置项，跟命令行参数基本是一一对应的。
+ 可以选择yaml或者json文件，就看个人洗好了。
+ json格式的配置文件，pm2当作普通的js文件来处理，所以可以在里面添加注释或者编写代码，这对于动态调整配置很有好处。
+ 如果启动的时候指定了配置文件，那么命令行参数会被忽略。（个别参数除外，比如--env）
 2.例子
 ``` bash
 {
@@ -120,17 +129,17 @@ pm2 describe 0 Describing process with id 0 - name oc-server
 ```
 
 # 五、自动重启
-#### 前面已经提到了，这里贴命令行，更多点击这里。
+ 前面已经提到了，这里贴命令行，更多点击这里。
 ``` bash
 pm2 start app.js --watch
 ```
-#### 这里是监控整个项目的文件，如果只想监听指定文件和目录，建议通过配置文件的watch、ignore_watch字段来设置。
+ 这里是监控整个项目的文件，如果只想监听指定文件和目录，建议通过配置文件的watch、ignore_watch字段来设置。
 
 # 六、环境切换
-#### 在实际项目开发中，我们的应用经常需要在多个环境下部署，比如开发环境、测试环境、生产环境等。在不同环境下，有时候配置项会有差异，比如链接的数据库地址不同等。
-#### 对于这种场景，pm2也是可以很好支持的。首先通过在配置文件中通过env_xx来声明不同环境的配置，然后在启动应用时，通过--env参数指定运行的环境。
+ 在实际项目开发中，我们的应用经常需要在多个环境下部署，比如开发环境、测试环境、生产环境等。在不同环境下，有时候配置项会有差异，比如链接的数据库地址不同等。
+ 对于这种场景，pm2也是可以很好支持的。首先通过在配置文件中通过env_xx来声明不同环境的配置，然后在启动应用时，通过--env参数指定运行的环境。
 1.环境配置声明
-#### 首先，在配置文件中，通过env选项声明多个环境配置。简单说明下：
+ 首先，在配置文件中，通过env选项声明多个环境配置。简单说明下：
 * env为默认的环境配置（生产环境），env_dev、env_test则分别是开发、测试环境。可以看到，不同环境下的NODE_ENV、REMOTE_ADDR字段的值是不同的。
 * 在应用中，可以通过process.env.REMOTE_ADDR等来读取配置中生命的变量。
 ``` bash
@@ -148,12 +157,12 @@ pm2 start app.js --watch
              }
 ```
 2.启动指明环境
-#### 假设通过下面启动脚本（开发环境），那么，此时process.env.REMOTE_ADDR的值就是相应的 http://wdev.example.com/ ，可以自己试验下。
+ 假设通过下面启动脚本（开发环境），那么，此时process.env.REMOTE_ADDR的值就是相应的 http://wdev.example.com/ ，可以自己试验下。
 ``` bash
 pm2 start app.js --env dev
 ```
 # 七、负载均衡
-#### 命令如下，表示开启三个进程。如果-i 0，则会根据机器当前核数自动开启尽可能多的进程。
+ 命令如下，表示开启三个进程。如果-i 0，则会根据机器当前核数自动开启尽可能多的进程。
 ``` bash
 pm2 start app.js -i 3 # 开启三个进程 
 ​
@@ -161,32 +170,32 @@ pm2 start app.js -i 3 # 开启三个进程
 ```
 
 # 八、日志查看
-#### 除了可以打开日志文件查看日志外，还可以通过pm2 logs来查看实时日志。这点对于线上问题排查非常重要。
-#### 比如某个node服务突然异常重启了，那么可以通过pm2提供的日志工具来查看实时日志，看是不是脚本出错之类导致的异常重启。
+ 除了可以打开日志文件查看日志外，还可以通过pm2 logs来查看实时日志。这点对于线上问题排查非常重要。
+ 比如某个node服务突然异常重启了，那么可以通过pm2提供的日志工具来查看实时日志，看是不是脚本出错之类导致的异常重启。
 ``` bash
 pm2 logs
 ```
 
 # 九、指令tab补全
-#### 运行pm2 --help，可以看到pm2支持的子命令还是蛮多的，这个时候，自动完成的功能就很重要了。
-#### 运行如下命令。恭喜，已经能够通过tab自动补全了。
+ 运行pm2 --help，可以看到pm2支持的子命令还是蛮多的，这个时候，自动完成的功能就很重要了。
+ 运行如下命令。恭喜，已经能够通过tab自动补全了。
 ``` bash
 pm2 completion install source ~/.bash_profile
 ```
 
 # 十、开机自动启动
-#### 可以通过pm2 startup来实现开机自启动。细节可参考。大致流程如下
+ 可以通过pm2 startup来实现开机自启动。细节可参考。大致流程如下
 1.通过pm2 save保存当前进程状态。
 2.通过pm2 startup [platform]生成开机自启动的命令。（记得查看控制台输出）
 3.将步骤2生成的命令，粘贴到控制台进行，搞定。
 
 # 十一、传入node args
-#### 直接上例子，分别是通过命令行和配置文件。
-#### 命令行
+ 直接上例子，分别是通过命令行和配置文件。
+ 命令行
 ``` bash
 pm2 start app.js --node-args="--harmony"
 ```
-#### 配置文件：
+ 配置文件：
 ``` bash
 { 
   "name" : "oc-server", 
@@ -195,7 +204,7 @@ pm2 start app.js --node-args="--harmony"
 }
 ```
 1.实例说明
-#### 假设是在centos下，那么运行如下命令，搞定。强烈建议运行完成之后，重启机器，看是否设置成功。
+ 假设是在centos下，那么运行如下命令，搞定。强烈建议运行完成之后，重启机器，看是否设置成功。
 ``` bash
 pm2 save 
 ​pm2 startup centos 
@@ -210,13 +219,13 @@ pm2 save
 ```
 
 # 十二、监控(monitor)
-#### 运行如下命令，查看当前通过pm2运行的进程的状态。
+ 运行如下命令，查看当前通过pm2运行的进程的状态。
 ``` bash
 pm2 monit
 ```
 
 # 十三、内存使用超过上限自动重启
-#### 如果想要你的应用，在超过使用内存上限后自动重启，那么可以加上--max-memory-restart参数。（有对应的配置项）
+ 如果想要你的应用，在超过使用内存上限后自动重启，那么可以加上--max-memory-restart参数。（有对应的配置项）
 ``` bash
 pm2 start big-array.js --max-memory-restart 20M
 ```
@@ -231,7 +240,7 @@ $ pm2 save # 记得保存进程状态
 ```
 
 # 十五、pm2 + nginx
-#### 无非就是在nginx上做个反向代理配置，直接贴配置。
+ 无非就是在nginx上做个反向代理配置，直接贴配置。
 ``` bash
 upstream my_nodejs_upstream 
 { 
@@ -254,18 +263,18 @@ server {
    }
 }
 ```
-#### 官方文档：http://pm2.keymetrics.io/docs/tutorials/pm2-nginx-production-setup
+ 官方文档：http://pm2.keymetrics.io/docs/tutorials/pm2-nginx-production-setup
 
 # 十六、pm2编程接口
-#### 如果想把pm2的进程监控，跟其他自动化流程整合起来，pm2的编程接口就很有用了。细节可参考官方文档：
-#### http://pm2.keymetrics.io/docs/usage/pm2-api/
+ 如果想把pm2的进程监控，跟其他自动化流程整合起来，pm2的编程接口就很有用了。细节可参考官方文档：
+ http://pm2.keymetrics.io/docs/usage/pm2-api/
 
 # 十七、模块扩展系统
-#### pm2支持第三方扩展，比如常用的log rotate等
+ pm2支持第三方扩展，比如常用的log rotate等
 
 
 # 一、安装
-#### Linux Binaries下载地址：https://nodejs.org/dist
+ Linux Binaries下载地址：https://nodejs.org/dist
 ``` bash
 cd oneinstack/src
 wget https://nodejs.org/dist/v4.2.4/node-v4.2.4-linux-x64.tar.gz
@@ -275,14 +284,14 @@ cp -R node-v4.2.4-linux-x64/lib/node_modules /usr/local/lib/
 ln -s /usr/local/lib/node_modules/npm/bin/npm-cli.js /usr/local/bin/npm
 npm install pm2@latest -g #安装最新版本pm2模块
 ```
-#### PS: 如果你的主机无法连接公网，先找到能连公网的主机安装上面的方法安装pm2，然后拷贝到你要安装的主机。拷贝如下目录：
+ PS: 如果你的主机无法连接公网，先找到能连公网的主机安装上面的方法安装pm2，然后拷贝到你要安装的主机。拷贝如下目录：
 ``` bash
 /usr/local/bin/node
 /usr/local/lib/node_modules
 ```
 
 # 二、PM2常用命令
-#### 假设你现在已经写好了一个app.js的文件，需要启动，你可以使用pm2进行管理
+ 假设你现在已经写好了一个app.js的文件，需要启动，你可以使用pm2进行管理
 1.启动
 ``` bash
 # pm2 start app.js
@@ -335,7 +344,7 @@ npm install pm2@latest -g #安装最新版本pm2模块
 # pm2 --help
 ```
 # 三、PM2目录结构
-#### 默认的目录是：当前用于的家目录下的.pm2目录（此目录可以自定义，请参考：五、自定义启动文件），详细信息如下：
+ 默认的目录是：当前用于的家目录下的.pm2目录（此目录可以自定义，请参考：五、自定义启动文件），详细信息如下：
 ``` bash
 $HOME/.pm2                #will contain all PM2 related files
 $HOME/.pm2/logs           #will contain all applications logs
@@ -348,7 +357,7 @@ $HOME/.pm2/conf.js        #PM2 Configuration
 ```
 
 # 四、自定义启动文件
-#### 创建一个test.json的示例文件，格式如下：
+ 创建一个test.json的示例文件，格式如下：
 ``` bash
 {
   "apps":
@@ -367,7 +376,7 @@ $HOME/.pm2/conf.js        #PM2 Configuration
     }
 }
 ```
-#### 说明：
+ 说明：
 
 * apps：json结构，apps是一个数组，每一个数组成员就是对应一个pm2中运行的应用
  
@@ -394,7 +403,7 @@ $HOME/.pm2/conf.js        #PM2 Configuration
 * watch：是否启用监控模式，默认是false。如果设置成true，当应用程序变动时，pm2会自动重载。这里也可以设置你要监控的文件。
 
 # 五、实例
-#### 已上面的test.json为例
+ 已上面的test.json为例
 ``` bash
 # cat > /data/wwwroot/nodejs/test.sh << EOF
 #!/bin/bash
