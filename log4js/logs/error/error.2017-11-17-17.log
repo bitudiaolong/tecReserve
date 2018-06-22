@@ -1,0 +1,266 @@
+[2017-11-17T17:32:12.265] [ERROR] error - {"fullName":"新版测试一","shortName":"测试一","projectManager":"玄苦","customer":"玄苦","version":"v1.0.1","status":"进行中","devCycle":"1个月","createTime":"2017-11-17","endTime":"2017-12-15"}
+[2017-11-17T17:32:12.300] [ERROR] error - { Error: ER_BAD_NULL_ERROR: Column 'description' cannot be null
+    at Query.Sequence._packetToError (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/Connection.js:103:28)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:266:12)
+    at readableAddChunk (_stream_readable.js:253:11)
+    --------------------
+    at Protocol._enqueue (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/Protocol.js:145:48)
+    at Connection.query (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/Connection.js:208:25)
+    at ceq (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql-queues@1.0.0@mysql-queues/index.js:17:47)
+    at /Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql-queues@1.0.0@mysql-queues/index.js:90:7
+    at Queue.execute (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql-queues@1.0.0@mysql-queues/index.js:116:7)
+    at Object.exports.addProject (/Users/gagc/HBuilderProjects/myExpressLogin/server/controller/projectController.js:55:8)
+    at router.post (/Users/gagc/HBuilderProjects/myExpressLogin/server/routes/routeProject.js:6:13)
+    at Layer.handle [as handle_request] (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_express@4.15.5@express/lib/router/layer.js:95:5)
+    at next (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_express@4.15.5@express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_express@4.15.5@express/lib/router/route.js:112:3)
+  code: 'ER_BAD_NULL_ERROR',
+  errno: 1048,
+  sqlMessage: 'Column \'description\' cannot be null',
+  sqlState: '23000',
+  index: 0,
+  sql: 'insert into api_projectList set `fullName` = \'新版测试一\', `shortName` = \'测试一\', `projectManager` = \'玄苦\', `customer` = \'玄苦\', `version` = \'v1.0.1\', `status` = \'进行中\', `devCycle` = \'1个月\', `createTime` = \'2017-11-17\', `endTime` = \'2017-12-15\', `description` = NULL, `level` = NULL' }
+[2017-11-17T17:32:12.324] [INFO] debug - ::1 - - "POST /api/addProject HTTP/1.1" 200 49 "http://localhost:3000/fprojectAdd" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
+[2017-11-17T17:34:59.977] [INFO] debug - ::1 - - "POST /api/getProjecAllList HTTP/1.1" 200 892 "http://localhost:3000/fprojectList" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
+[2017-11-17T17:35:05.071] [INFO] debug - ::1 - - "POST /api/getProjecAllList HTTP/1.1" 200 892 "http://localhost:3000/fprojectList" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
+[2017-11-17T17:37:52.763] [ERROR] error - {"fullName":"新版测试","shortName":"测试","projectManager":"玄苦","customer":"玄苦","version":"v1.1.1","status":"进行中","devCycle":"待定","createTime":"2017-11-17","endTime":"2017-11-30"}
+[2017-11-17T17:37:52.767] [ERROR] error - { Error: ER_BAD_NULL_ERROR: Column 'description' cannot be null
+    at Query.Sequence._packetToError (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/Connection.js:103:28)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:266:12)
+    at readableAddChunk (_stream_readable.js:253:11)
+    --------------------
+    at Protocol._enqueue (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/Protocol.js:145:48)
+    at Connection.query (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/Connection.js:208:25)
+    at ceq (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql-queues@1.0.0@mysql-queues/index.js:17:47)
+    at /Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql-queues@1.0.0@mysql-queues/index.js:90:7
+    at Queue.execute (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql-queues@1.0.0@mysql-queues/index.js:116:7)
+    at Object.exports.addProject (/Users/gagc/HBuilderProjects/myExpressLogin/server/controller/projectController.js:55:8)
+    at router.post (/Users/gagc/HBuilderProjects/myExpressLogin/server/routes/routeProject.js:6:13)
+    at Layer.handle [as handle_request] (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_express@4.15.5@express/lib/router/layer.js:95:5)
+    at next (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_express@4.15.5@express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_express@4.15.5@express/lib/router/route.js:112:3)
+  code: 'ER_BAD_NULL_ERROR',
+  errno: 1048,
+  sqlMessage: 'Column \'description\' cannot be null',
+  sqlState: '23000',
+  index: 0,
+  sql: 'insert into api_projectList set `fullName` = \'新版测试\', `shortName` = \'测试\', `projectManager` = \'玄苦\', `customer` = \'玄苦\', `version` = \'v1.1.1\', `status` = \'进行中\', `devCycle` = \'待定\', `createTime` = \'2017-11-17\', `endTime` = \'2017-11-30\', `description` = NULL, `level` = NULL' }
+[2017-11-17T17:37:52.771] [INFO] debug - ::1 - - "POST /api/addProject HTTP/1.1" 200 49 "http://localhost:3000/fprojectAdd" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
+[2017-11-17T17:38:19.133] [ERROR] error - {"fullName":"新版测试","shortName":"测试","projectManager":"玄苦","customer":"玄苦","version":"v1.1.1","status":"进行中","devCycle":"待定","createTime":"2017-11-17","endTime":"2017-11-30"}
+[2017-11-17T17:38:19.135] [ERROR] error - { Error: ER_BAD_NULL_ERROR: Column 'description' cannot be null
+    at Query.Sequence._packetToError (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/Connection.js:103:28)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:266:12)
+    at readableAddChunk (_stream_readable.js:253:11)
+    --------------------
+    at Protocol._enqueue (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/Protocol.js:145:48)
+    at Connection.query (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/Connection.js:208:25)
+    at ceq (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql-queues@1.0.0@mysql-queues/index.js:17:47)
+    at /Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql-queues@1.0.0@mysql-queues/index.js:90:7
+    at Queue.execute (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql-queues@1.0.0@mysql-queues/index.js:116:7)
+    at Object.exports.addProject (/Users/gagc/HBuilderProjects/myExpressLogin/server/controller/projectController.js:55:8)
+    at router.post (/Users/gagc/HBuilderProjects/myExpressLogin/server/routes/routeProject.js:6:13)
+    at Layer.handle [as handle_request] (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_express@4.15.5@express/lib/router/layer.js:95:5)
+    at next (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_express@4.15.5@express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_express@4.15.5@express/lib/router/route.js:112:3)
+  code: 'ER_BAD_NULL_ERROR',
+  errno: 1048,
+  sqlMessage: 'Column \'description\' cannot be null',
+  sqlState: '23000',
+  index: 0,
+  sql: 'insert into api_projectList set `fullName` = \'新版测试\', `shortName` = \'测试\', `projectManager` = \'玄苦\', `customer` = \'玄苦\', `version` = \'v1.1.1\', `status` = \'进行中\', `devCycle` = \'待定\', `createTime` = \'2017-11-17\', `endTime` = \'2017-11-30\', `description` = NULL, `level` = NULL' }
+[2017-11-17T17:38:19.138] [INFO] debug - ::1 - - "POST /api/addProject HTTP/1.1" 200 49 "http://localhost:3000/fprojectAdd" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
+[2017-11-17T17:38:21.299] [INFO] debug - ::1 - - "POST /api/fweeklySelect HTTP/1.1" 200 2083 "http://localhost:3000/fweekly" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
+[2017-11-17T17:38:22.192] [INFO] debug - ::1 - - "POST /api/getProjecAllList HTTP/1.1" 200 892 "http://localhost:3000/fprojectList" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
+[2017-11-17T17:41:32.586] [ERROR] error - {"fullName":"description","shortName":"description","projectManager":"xuanku","customer":"xuanku","version":"v1.1.1","status":"进行中","devCycle":"1个月","createTime":"2017-11-17","endTime":"2017-12-06"}
+[2017-11-17T17:41:32.588] [ERROR] error - { Error: ER_BAD_NULL_ERROR: Column 'description' cannot be null
+    at Query.Sequence._packetToError (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/Connection.js:103:28)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:266:12)
+    at readableAddChunk (_stream_readable.js:253:11)
+    --------------------
+    at Protocol._enqueue (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/Protocol.js:145:48)
+    at Connection.query (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/Connection.js:208:25)
+    at ceq (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql-queues@1.0.0@mysql-queues/index.js:17:47)
+    at /Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql-queues@1.0.0@mysql-queues/index.js:90:7
+    at Queue.execute (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql-queues@1.0.0@mysql-queues/index.js:116:7)
+    at Object.exports.addProject (/Users/gagc/HBuilderProjects/myExpressLogin/server/controller/projectController.js:55:8)
+    at router.post (/Users/gagc/HBuilderProjects/myExpressLogin/server/routes/routeProject.js:6:13)
+    at Layer.handle [as handle_request] (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_express@4.15.5@express/lib/router/layer.js:95:5)
+    at next (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_express@4.15.5@express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_express@4.15.5@express/lib/router/route.js:112:3)
+  code: 'ER_BAD_NULL_ERROR',
+  errno: 1048,
+  sqlMessage: 'Column \'description\' cannot be null',
+  sqlState: '23000',
+  index: 0,
+  sql: 'insert into api_projectList set `fullName` = \'description\', `shortName` = \'description\', `projectManager` = \'xuanku\', `customer` = \'xuanku\', `version` = \'v1.1.1\', `status` = \'进行中\', `devCycle` = \'1个月\', `createTime` = \'2017-11-17\', `endTime` = \'2017-12-06\', `description` = NULL, `level` = NULL' }
+[2017-11-17T17:41:32.590] [INFO] debug - ::1 - - "POST /api/addProject HTTP/1.1" 200 49 "http://localhost:3000/fprojectAdd" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
+[2017-11-17T17:41:34.235] [INFO] debug - ::1 - - "POST /api/getProjecAllList HTTP/1.1" 200 892 "http://localhost:3000/fprojectList" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
+[2017-11-17T17:41:58.569] [ERROR] error - {"fullName":" v-model=\"list.description\"","shortName":" v-model=\"list.description\"","projectManager":" v-model=\"list.description\"","customer":" v-model=\"list.description\"","version":" v-model=\"list.description\"","status":"已完成","devCycle":"待定","createTime":"2017-11-17","endTime":"2017-11-17"}
+[2017-11-17T17:41:58.572] [ERROR] error - { Error: ER_BAD_NULL_ERROR: Column 'description' cannot be null
+    at Query.Sequence._packetToError (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/Connection.js:103:28)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:266:12)
+    at readableAddChunk (_stream_readable.js:253:11)
+    --------------------
+    at Protocol._enqueue (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/Protocol.js:145:48)
+    at Connection.query (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/Connection.js:208:25)
+    at ceq (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql-queues@1.0.0@mysql-queues/index.js:17:47)
+    at /Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql-queues@1.0.0@mysql-queues/index.js:90:7
+    at Queue.execute (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql-queues@1.0.0@mysql-queues/index.js:116:7)
+    at Object.exports.addProject (/Users/gagc/HBuilderProjects/myExpressLogin/server/controller/projectController.js:55:8)
+    at router.post (/Users/gagc/HBuilderProjects/myExpressLogin/server/routes/routeProject.js:6:13)
+    at Layer.handle [as handle_request] (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_express@4.15.5@express/lib/router/layer.js:95:5)
+    at next (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_express@4.15.5@express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_express@4.15.5@express/lib/router/route.js:112:3)
+  code: 'ER_BAD_NULL_ERROR',
+  errno: 1048,
+  sqlMessage: 'Column \'description\' cannot be null',
+  sqlState: '23000',
+  index: 0,
+  sql: 'insert into api_projectList set `fullName` = \' v-model=\\"list.description\\"\', `shortName` = \' v-model=\\"list.description\\"\', `projectManager` = \' v-model=\\"list.description\\"\', `customer` = \' v-model=\\"list.description\\"\', `version` = \' v-model=\\"list.description\\"\', `status` = \'已完成\', `devCycle` = \'待定\', `createTime` = \'2017-11-17\', `endTime` = \'2017-11-17\', `description` = NULL, `level` = NULL' }
+[2017-11-17T17:41:58.575] [INFO] debug - ::1 - - "POST /api/addProject HTTP/1.1" 200 49 "http://localhost:3000/fprojectAdd" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
+[2017-11-17T17:43:11.396] [ERROR] error - {"fullName":" v-model=\"list.description\"","shortName":" v-model=\"list.description\"","projectManager":" v-model=\"list.description\"","customer":" v-model=\"list.description\"","version":" v-model=\"list.description\"","status":"已完成","devCycle":"待定","createTime":"2017-11-17","endTime":"2017-11-17"}
+[2017-11-17T17:43:11.398] [ERROR] error - { Error: ER_BAD_NULL_ERROR: Column 'description' cannot be null
+    at Query.Sequence._packetToError (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/Connection.js:103:28)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:266:12)
+    at readableAddChunk (_stream_readable.js:253:11)
+    --------------------
+    at Protocol._enqueue (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/Protocol.js:145:48)
+    at Connection.query (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/Connection.js:208:25)
+    at ceq (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql-queues@1.0.0@mysql-queues/index.js:17:47)
+    at /Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql-queues@1.0.0@mysql-queues/index.js:90:7
+    at Queue.execute (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql-queues@1.0.0@mysql-queues/index.js:116:7)
+    at Object.exports.addProject (/Users/gagc/HBuilderProjects/myExpressLogin/server/controller/projectController.js:55:8)
+    at router.post (/Users/gagc/HBuilderProjects/myExpressLogin/server/routes/routeProject.js:6:13)
+    at Layer.handle [as handle_request] (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_express@4.15.5@express/lib/router/layer.js:95:5)
+    at next (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_express@4.15.5@express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_express@4.15.5@express/lib/router/route.js:112:3)
+  code: 'ER_BAD_NULL_ERROR',
+  errno: 1048,
+  sqlMessage: 'Column \'description\' cannot be null',
+  sqlState: '23000',
+  index: 0,
+  sql: 'insert into api_projectList set `fullName` = \' v-model=\\"list.description\\"\', `shortName` = \' v-model=\\"list.description\\"\', `projectManager` = \' v-model=\\"list.description\\"\', `customer` = \' v-model=\\"list.description\\"\', `version` = \' v-model=\\"list.description\\"\', `status` = \'已完成\', `devCycle` = \'待定\', `createTime` = \'2017-11-17\', `endTime` = \'2017-11-17\', `description` = NULL, `level` = NULL' }
+[2017-11-17T17:43:11.401] [INFO] debug - ::1 - - "POST /api/addProject HTTP/1.1" 200 49 "http://localhost:3000/fprojectAdd" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
+[2017-11-17T17:43:18.133] [INFO] debug - ::1 - - "POST /api/getProjecAllList HTTP/1.1" 200 892 "http://localhost:3000/fprojectList" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
+[2017-11-17T17:43:40.411] [ERROR] error - {"fullName":"front","shortName":"front","projectManager":"front","customer":"front","version":"front","status":"已完成","devCycle":"1个月","createTime":"2017-11-17","endTime":"2017-11-10"}
+[2017-11-17T17:43:40.415] [ERROR] error - { Error: ER_BAD_NULL_ERROR: Column 'description' cannot be null
+    at Query.Sequence._packetToError (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/Connection.js:103:28)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:266:12)
+    at readableAddChunk (_stream_readable.js:253:11)
+    --------------------
+    at Protocol._enqueue (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/Protocol.js:145:48)
+    at Connection.query (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/Connection.js:208:25)
+    at ceq (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql-queues@1.0.0@mysql-queues/index.js:17:47)
+    at /Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql-queues@1.0.0@mysql-queues/index.js:90:7
+    at Queue.execute (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql-queues@1.0.0@mysql-queues/index.js:116:7)
+    at Object.exports.addProject (/Users/gagc/HBuilderProjects/myExpressLogin/server/controller/projectController.js:55:8)
+    at router.post (/Users/gagc/HBuilderProjects/myExpressLogin/server/routes/routeProject.js:6:13)
+    at Layer.handle [as handle_request] (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_express@4.15.5@express/lib/router/layer.js:95:5)
+    at next (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_express@4.15.5@express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_express@4.15.5@express/lib/router/route.js:112:3)
+  code: 'ER_BAD_NULL_ERROR',
+  errno: 1048,
+  sqlMessage: 'Column \'description\' cannot be null',
+  sqlState: '23000',
+  index: 0,
+  sql: 'insert into api_projectList set `fullName` = \'front\', `shortName` = \'front\', `projectManager` = \'front\', `customer` = \'front\', `version` = \'front\', `status` = \'已完成\', `devCycle` = \'1个月\', `createTime` = \'2017-11-17\', `endTime` = \'2017-11-10\', `description` = NULL, `level` = NULL' }
+[2017-11-17T17:43:40.417] [INFO] debug - ::1 - - "POST /api/addProject HTTP/1.1" 200 49 "http://localhost:3000/fprojectAdd" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
+[2017-11-17T17:44:43.850] [ERROR] error - {"fullName":"front","shortName":"front","projectManager":"front","customer":"front","version":"front","status":"已完成","devCycle":"1个月","createTime":"2017-11-17","endTime":"2017-11-10"}
+[2017-11-17T17:44:43.852] [ERROR] error - { Error: ER_BAD_NULL_ERROR: Column 'description' cannot be null
+    at Query.Sequence._packetToError (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/Connection.js:103:28)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:266:12)
+    at readableAddChunk (_stream_readable.js:253:11)
+    --------------------
+    at Protocol._enqueue (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/protocol/Protocol.js:145:48)
+    at Connection.query (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql@2.15.0@mysql/lib/Connection.js:208:25)
+    at ceq (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql-queues@1.0.0@mysql-queues/index.js:17:47)
+    at /Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql-queues@1.0.0@mysql-queues/index.js:90:7
+    at Queue.execute (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_mysql-queues@1.0.0@mysql-queues/index.js:116:7)
+    at Object.exports.addProject (/Users/gagc/HBuilderProjects/myExpressLogin/server/controller/projectController.js:55:8)
+    at router.post (/Users/gagc/HBuilderProjects/myExpressLogin/server/routes/routeProject.js:6:13)
+    at Layer.handle [as handle_request] (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_express@4.15.5@express/lib/router/layer.js:95:5)
+    at next (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_express@4.15.5@express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/gagc/HBuilderProjects/myExpressLogin/server/node_modules/_express@4.15.5@express/lib/router/route.js:112:3)
+  code: 'ER_BAD_NULL_ERROR',
+  errno: 1048,
+  sqlMessage: 'Column \'description\' cannot be null',
+  sqlState: '23000',
+  index: 0,
+  sql: 'insert into api_projectList set `fullName` = \'front\', `shortName` = \'front\', `projectManager` = \'front\', `customer` = \'front\', `version` = \'front\', `status` = \'已完成\', `devCycle` = \'1个月\', `createTime` = \'2017-11-17\', `endTime` = \'2017-11-10\', `description` = NULL, `level` = NULL' }
+[2017-11-17T17:44:43.855] [INFO] debug - ::1 - - "POST /api/addProject HTTP/1.1" 200 49 "http://localhost:3000/fprojectAdd" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
+[2017-11-17T17:45:15.305] [INFO] debug - ::1 - - "POST /api/getProjecAllList HTTP/1.1" 200 892 "http://localhost:3000/fprojectList" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
+[2017-11-17T17:45:16.881] [INFO] debug - ::1 - - "POST /api/getProjecAllList HTTP/1.1" 200 892 "http://localhost:3000/fprojectList" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
+[2017-11-17T17:45:17.268] [INFO] debug - ::1 - - "POST /api/getProjecAllList HTTP/1.1" 200 892 "http://localhost:3000/fprojectList" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
+[2017-11-17T17:46:29.875] [ERROR] error - {"fullName":"","shortName":"","projectManager":"","customer":"","version":"","status":"","devCycle":"","createTime":"","endTime":""}
+[2017-11-17T17:46:52.254] [INFO] debug - ::1 - - "POST /api/getProjecAllList HTTP/1.1" 200 892 "http://localhost:3000/fprojectList" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
+[2017-11-17T17:47:44.007] [ERROR] error - {"fullName":"测试创建项目","shortName":"测试","projectManager":"玄苦","customer":"玄苦","version":"v1.1.1","status":"进行中","devCycle":"1个月","createTime":"2017-11-17","endTime":"2017-12-17","description":"这是个描述这是个描述这是个描述这是个描述这是个描述这是个描述这是个描述这是个描述这是个描述这是个描述这是个描述这是个描述这是个描述这是个描述这是个描述这是个描述这是个描述","level":"普通"}
+[2017-11-17T17:47:44.015] [INFO] debug - ::1 - - "POST /api/addProject HTTP/1.1" 200 47 "http://localhost:3000/fprojectAdd" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
+[2017-11-17T17:47:45.205] [INFO] debug - ::1 - - "POST /api/getProjecAllList HTTP/1.1" 200 892 "http://localhost:3000/fprojectList" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
+[2017-11-17T17:52:14.732] [INFO] debug - ::1 - - "POST /api/getProjecAllList HTTP/1.1" 200 892 "http://localhost:3000/fprojectList" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
+[2017-11-17T17:52:16.093] [INFO] debug - ::1 - - "POST /api/getProjecAllList HTTP/1.1" 200 2433 "http://localhost:3000/fprojectList" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
+[2017-11-17T17:52:19.351] [INFO] debug - ::1 - - "POST /api/getProjecAllList HTTP/1.1" 200 2433 "http://localhost:3000/fprojectList" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
+[2017-11-17T17:54:59.424] [INFO] debug - ::1 - - "POST /api/getProjecAllList HTTP/1.1" 200 892 "http://localhost:3000/fprojectList" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
+[2017-11-17T17:55:00.873] [INFO] debug - ::1 - - "POST /api/getProjecAllList HTTP/1.1" 200 2433 "http://localhost:3000/fprojectList" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
+[2017-11-17T17:55:03.666] [INFO] debug - ::1 - - "POST /api/getProjecAllList HTTP/1.1" 200 892 "http://localhost:3000/fprojectList" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
+[2017-11-17T17:55:05.007] [INFO] debug - ::1 - - "POST /api/getProjecAllList HTTP/1.1" 200 2433 "http://localhost:3000/fprojectList" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
+[2017-11-17T17:55:30.555] [INFO] debug - ::1 - - "POST /api/getProjecAllList HTTP/1.1" 200 892 "http://localhost:3000/fprojectList" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
+[2017-11-17T17:55:31.110] [INFO] debug - ::1 - - "POST /api/getProjecAllList HTTP/1.1" 200 2433 "http://localhost:3000/fprojectList" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
+[2017-11-17T17:55:31.937] [INFO] debug - ::1 - - "POST /api/getProjecAllList HTTP/1.1" 200 892 "http://localhost:3000/fprojectList" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
+[2017-11-17T17:55:32.663] [INFO] debug - ::1 - - "POST /api/getProjecAllList HTTP/1.1" 200 2433 "http://localhost:3000/fprojectList" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
+[2017-11-17T17:55:34.027] [INFO] debug - ::1 - - "POST /api/getProjecAllList HTTP/1.1" 200 892 "http://localhost:3000/fprojectList" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"

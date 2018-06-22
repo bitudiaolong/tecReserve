@@ -1,0 +1,89 @@
+[2017-11-16 15:06:01.466] [INFO] info - mysql数据库连接成功,threadId: 36
+[2017-11-16 15:08:23.679] [INFO] info - mysql数据库连接成功,threadId: 39
+[2017-11-16 15:10:28.509] [INFO] info - mysql数据库连接成功,threadId: 40
+[2017-11-16 15:19:14.649] [INFO] info - mysql数据库连接成功,threadId: 42
+[2017-11-16 15:19:22.670] [INFO] info - =======================
+[2017-11-16 15:19:22.670] [INFO] info - 一、登陆用户:admin
+[2017-11-16 15:19:22.671] [INFO] info - 二、加盐密码:d033e22ae348aeb5660fc2140aec35850c4da997
+[2017-11-16 15:19:22.680] [INFO] info - 三、查询成功:错误信息为null
+[2017-11-16 15:19:22.680] [INFO] info - 四、用户存在
+[2017-11-16 15:19:22.688] [ERROR] debug - ::1 - - "POST /api/login HTTP/1.1" 500 281 "http://localhost:3000/login" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+[2017-11-16 15:19:58.529] [INFO] info - mysql数据库连接成功,threadId: 43
+[2017-11-16 15:20:00.740] [INFO] info - =======================
+[2017-11-16 15:20:00.740] [INFO] info - 一、登陆用户:admin
+[2017-11-16 15:20:00.741] [INFO] info - 二、加盐密码:d033e22ae348aeb5660fc2140aec35850c4da997
+[2017-11-16 15:20:00.768] [INFO] info - 三、查询成功:错误信息为null
+[2017-11-16 15:20:00.768] [INFO] info - 四、用户存在
+[2017-11-16 15:20:00.776] [INFO] debug - ::1 - - "POST /api/login HTTP/1.1" 200 281 "http://localhost:3000/login" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+[2017-11-16 15:20:01.214] [INFO] debug - ::1 - - "POST /api/getProjectList HTTP/1.1" 200 1815 "http://localhost:3000/fprojectList" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+[2017-11-16 15:25:29.257] [INFO] info - mysql数据库连接成功,threadId: 44
+[2017-11-16 15:25:35.715] [INFO] info - =======================
+[2017-11-16 15:25:35.716] [INFO] info - 一、登陆用户:admin
+[2017-11-16 15:25:35.716] [INFO] info - 二、加盐密码:d033e22ae348aeb5660fc2140aec35850c4da997
+[2017-11-16 15:25:35.746] [INFO] info - 三、查询成功:错误信息为null
+[2017-11-16 15:25:35.746] [INFO] info - 四、用户存在
+[2017-11-16 15:25:35.759] [INFO] debug - ::1 - - "POST /api/login HTTP/1.1" 200 281 "http://localhost:3000/login" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+[2017-11-16 15:25:36.197] [INFO] debug - ::1 - - "POST /api/getProjectList HTTP/1.1" 200 1815 "http://localhost:3000/fprojectList" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+[2017-11-16 15:29:30.962] [INFO] debug - ::1 - - "POST /api/getUserList HTTP/1.1" 200 3301 "http://localhost:3000/fcontacts" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+[2017-11-16 15:39:44.457] [INFO] info - mysql数据库连接成功,threadId: 45
+[2017-11-16 15:39:49.969] [ERROR] debug - ::1 - - "POST /api/login HTTP/1.1" 500 1627 "http://localhost:3000/login" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+[2017-11-16 15:41:20.461] [INFO] info - mysql数据库连接成功,threadId: 46
+[2017-11-16 15:41:22.393] [ERROR] debug - ::1 - - "POST /api/login HTTP/1.1" 500 1627 "http://localhost:3000/login" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+[2017-11-16 15:41:53.818] [INFO] info - mysql数据库连接成功,threadId: 47
+[2017-11-16 15:41:55.373] [ERROR] debug - ::1 - - "POST /api/login HTTP/1.1" 500 1627 "http://localhost:3000/login" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+[2017-11-16 15:43:25.671] [INFO] info - mysql数据库连接成功,threadId: 48
+[2017-11-16 15:43:26.671] [ERROR] debug - ::1 - - "POST /api/login HTTP/1.1" 500 1627 "http://localhost:3000/login" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+[2017-11-16 15:44:27.103] [INFO] info - mysql数据库连接成功,threadId: 49
+[2017-11-16 15:44:29.170] [ERROR] debug - ::1 - - "POST /api/login HTTP/1.1" 500 1627 "http://localhost:3000/login" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+[2017-11-16 15:44:47.574] [INFO] info - mysql数据库连接成功,threadId: 50
+[2017-11-16 15:44:49.845] [ERROR] debug - ::1 - - "POST /api/login HTTP/1.1" 500 1627 "http://localhost:3000/login" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+[2017-11-16 15:45:17.050] [INFO] info - mysql数据库连接成功,threadId: 51
+[2017-11-16 15:45:19.428] [ERROR] debug - ::1 - - "POST /api/login HTTP/1.1" 500 1627 "http://localhost:3000/login" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+[2017-11-16 15:46:12.699] [INFO] info - mysql数据库连接成功,threadId: 52
+[2017-11-16 15:46:12.748] [INFO] info - ==================-------------------------
+[2017-11-16 15:46:29.665] [INFO] info - mysql数据库连接成功,threadId: 53
+[2017-11-16 15:46:31.667] [INFO] info - ==================-------------------------
+[2017-11-16 15:47:13.240] [INFO] info - mysql数据库连接成功,threadId: 54
+[2017-11-16 15:47:15.013] [INFO] info - ==================-------------------------
+[2017-11-16 15:47:15.022] [ERROR] debug - ::1 - - "POST /api/login HTTP/1.1" 500 1627 "http://localhost:3000/login" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+[2017-11-16 15:47:34.699] [INFO] info - mysql数据库连接成功,threadId: 55
+[2017-11-16 15:47:36.350] [INFO] info - ==================-------------------------
+[2017-11-16 15:47:36.350] [INFO] info - 一、登陆用户:admin
+[2017-11-16 15:47:36.351] [INFO] info - 二、加盐密码:d033e22ae348aeb5660fc2140aec35850c4da997
+[2017-11-16 15:47:36.357] [INFO] info - 三、查询成功:错误信息为null
+[2017-11-16 15:47:36.357] [INFO] info - 四、用户存在
+[2017-11-16 15:47:36.364] [INFO] debug - ::1 - - "POST /api/login HTTP/1.1" 200 281 "http://localhost:3000/login" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+[2017-11-16 15:47:36.780] [INFO] debug - ::1 - - "POST /api/getProjectList HTTP/1.1" 200 1815 "http://localhost:3000/fprojectList" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+[2017-11-16 15:48:51.945] [INFO] info - ==================-------------------------
+[2017-11-16 15:48:51.946] [INFO] info - 一、登陆用户:admin
+[2017-11-16 15:48:51.946] [INFO] info - 二、加盐密码:bc5832de4d1698bcf6f07c366072a262892b4c25
+[2017-11-16 15:48:51.948] [INFO] info - 三、查询成功:错误信息为null
+[2017-11-16 15:48:51.948] [INFO] info - 四、用户名或密码错误
+[2017-11-16 15:48:51.950] [INFO] debug - ::1 - - "POST /api/login HTTP/1.1" 200 61 "http://localhost:3000/login" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+[2017-11-16 15:48:55.026] [INFO] info - ==================-------------------------
+[2017-11-16 15:48:55.027] [INFO] info - 一、登陆用户:admin
+[2017-11-16 15:48:55.027] [INFO] info - 二、加盐密码:d033e22ae348aeb5660fc2140aec35850c4da997
+[2017-11-16 15:48:55.029] [INFO] info - 三、查询成功:错误信息为null
+[2017-11-16 15:48:55.029] [INFO] info - 四、用户存在
+[2017-11-16 15:48:55.030] [INFO] debug - ::1 - - "POST /api/login HTTP/1.1" 200 281 "http://localhost:3000/login" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+[2017-11-16 15:48:55.340] [INFO] debug - ::1 - - "POST /api/getProjectList HTTP/1.1" 200 1815 "http://localhost:3000/fprojectList" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+[2017-11-16 15:52:10.287] [INFO] info - mysql数据库连接成功,threadId: 56
+[2017-11-16 15:54:21.712] [INFO] info - mysql数据库连接成功,threadId: 57
+[2017-11-16 15:54:24.954] [INFO] debug - ::1 - - "POST /api/getProjectList HTTP/1.1" 200 1815 "http://localhost:3000/fprojectList" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+[2017-11-16 15:54:27.961] [INFO] info - 查询成功:null
+[2017-11-16 15:54:27.963] [INFO] debug - ::1 - - "POST /api/login HTTP/1.1" 200 281 "http://localhost:3000/login" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+[2017-11-16 15:54:28.212] [INFO] debug - ::1 - - "POST /api/getProjectList HTTP/1.1" 200 1815 "http://localhost:3000/fprojectList" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+[2017-11-16 15:56:11.621] [INFO] info - mysql数据库连接成功,threadId: 58
+[2017-11-16 15:56:16.063] [INFO] info - 查询成功:null
+[2017-11-16 15:56:16.071] [INFO] debug - ::1 - - "POST /api/login HTTP/1.1" 200 281 "http://localhost:3000/login" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+[2017-11-16 15:56:16.388] [INFO] debug - ::1 - - "POST /api/getProjectList HTTP/1.1" 200 1815 "http://localhost:3000/fprojectList" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+[2017-11-16 15:56:19.206] [INFO] info - 查询成功:null
+[2017-11-16 15:56:19.207] [INFO] debug - ::1 - - "POST /api/login HTTP/1.1" 200 61 "http://localhost:3000/login" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+[2017-11-16 15:56:21.863] [INFO] info - 查询成功:null
+[2017-11-16 15:56:21.864] [INFO] debug - ::1 - - "POST /api/login HTTP/1.1" 200 281 "http://localhost:3000/login" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+[2017-11-16 15:56:22.155] [INFO] debug - ::1 - - "POST /api/getProjectList HTTP/1.1" 200 1815 "http://localhost:3000/fprojectList" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+[2017-11-16 15:56:32.408] [INFO] info - mysql数据库连接成功,threadId: 59
+[2017-11-16 15:56:36.010] [INFO] info - 查询成功:null
+[2017-11-16 15:56:36.017] [INFO] debug - ::1 - - "POST /api/login HTTP/1.1" 200 281 "http://localhost:3000/login" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+[2017-11-16 15:56:36.338] [INFO] debug - ::1 - - "POST /api/getProjectList HTTP/1.1" 200 1815 "http://localhost:3000/fprojectList" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+[2017-11-16 15:57:30.997] [INFO] debug - ::1 - - "POST /api/getProjectList HTTP/1.1" 200 1815 "http://localhost:3000/fprojectList" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
