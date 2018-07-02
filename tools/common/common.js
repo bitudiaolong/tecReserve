@@ -77,3 +77,33 @@ $$.terminal = function(type) {
 		return navigator.userAgent.indexOf('Android') > -1 || navigator.userAgent.indexOf('Adr') > -1;
 	}
 }
+var browser = {
+	versions: function() {
+		/**
+		 * 终端判断
+		 * 1、trident：IE内核
+		 * 2、presto：opera内核
+		 * 3、webKit：苹果、谷歌内核
+		 * 4、gecko：火狐内核
+		 * 5、mobile：是否为移动终端
+		 * 6、ios：ios终端
+		 * 7、android：android终端或者uc浏览器
+		 * 8、iPhone：是否为iPhone或者QQHD浏览器
+		 * 9、iPad：是否iPad
+		 * 10、webApp：是否web应该程序，没有头部与底部
+		 */
+		var u = navigator.userAgent;
+		return {
+			trident: u.indexOf('Trident') > -1,
+			presto: u.indexOf('Presto') > -1,
+			webKit: u.indexOf('AppleWebKit') > -1,
+			gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1,
+			mobile: !!u.match(/AppleWebKit.*Mobile.*/) || u.indexOf('iPad') > -1,
+			ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+			android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1,
+			iPhone: u.indexOf('iPhone') > -1,
+			iPad: u.indexOf('iPad') > -1,
+			webApp: u.indexOf('Safari') == -1
+		};
+	}()
+}
